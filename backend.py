@@ -265,8 +265,13 @@ def flight_agent(state: TravelState):
     query = state["user_query"]
 
     try:
-        airports = asyncio.run(aviation_mcp_search("list_airports"))
-        airlines = asyncio.run(aviation_mcp_search("list_airlines"))
+    airports = asyncio.run(
+        aviation_mcp_search("list_airports", {})
+    )
+
+    airlines = asyncio.run(
+        aviation_mcp_search("list_airlines", {})
+    )
 
         print("\nAIRPORTS:", airports)
         print("\nAIRLINES:", airlines)
