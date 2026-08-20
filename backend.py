@@ -38,7 +38,7 @@ def get_database_url():
     return database_url
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-llm = ChatGroq(model="llama-3.1-8b-instant", api_key=GROQ_API_KEY)
+llm = ChatGroq(model="openai/gpt-oss-20b", api_key=GROQ_API_KEY)
 
 class TravelState(TypedDict, total=False):
     messages: Annotated[list[AnyMessage], operator.add]
