@@ -8,7 +8,7 @@ import asyncio
 import nest_asyncio
 nest_asyncio.apply()
 from langchain_groq import ChatGroq
-llm=ChatGroq(model="llama-3.3-70b-versatile")
+llm=ChatGroq(model="openai/gpt-oss-20b")
 AVIATION_API_KEY=os.getenv("AVIATION_API_KEY")
 TAVILY_API_KEY=os.getenv("TAVILY_API_KEY")
 OPENWEATHER_API_KEY=os.getenv("OPENWEATHER_API_KEY")
